@@ -10,7 +10,6 @@ License:    	GPL
 Group:        	Sound
 URL:          	http://tap-plugins.sourceforge.net/
 Source0:      	tap-plugins-%{version}.tar.bz2
-BuildRoot:    	%{_tmppath}/%{name}-buildroot
 
 %description
 TAP-plugins is short for Tom's Audio Processing plugins. It is a bunch
