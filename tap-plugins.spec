@@ -1,6 +1,6 @@
 %define name	tap-plugins
 %define version 0.7.0
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:      	Tom's Audio Processing plugins
 Name:         	%{name}
