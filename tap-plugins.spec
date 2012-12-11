@@ -40,3 +40,53 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/ladspa/*.so
 %{_datadir}/ladspa/rdf/*
 
+
+
+%changelog
+* Wed Mar 16 2011 Stéphane Téletchéa <steletch@mandriva.org> 0.7.1-1mdv2011.0
++ Revision: 645447
+- update to new version 0.7.1
+
+* Tue Sep 08 2009 Thierry Vignaud <tv@mandriva.org> 0.7.0-6mdv2010.0
++ Revision: 434274
+- rebuild
+
+* Sat Aug 02 2008 Thierry Vignaud <tv@mandriva.org> 0.7.0-5mdv2009.0
++ Revision: 261376
+- rebuild
+
+* Tue Jul 29 2008 Thierry Vignaud <tv@mandriva.org> 0.7.0-4mdv2009.0
++ Revision: 254121
+- rebuild
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 0.7.0-2mdv2008.1
++ Revision: 128226
+- kill re-definition of %%buildroot on Pixel's request
+- use %%mkrel
+- import tap-plugins
+
+
+* Wed Nov 9 2005 Austin Acton <austin@mandriva.org> 0.7.0-2mdk
+- rebuild
+
+* Fri Aug 20 2004 Austin Acton <austin@mandrake.org> 0.7.0-1mdk
+- 0.7.0
+
+* Tue Jun 22 2004 Austin Acton <austin@mandrake.org> 0.6.0-1mdk
+- 0.6.0
+- bzip source
+- use proper cflags
+- add docs
+
+* Sat May 8 2004 Austin Acton <austin@mandrake.org> 0.4.0-1mdk
+- steal from CCRMA
+
+* Wed Feb 18 2004 Fernando Lopez-Lezcano <nando@ccrma.stanford.edu> 0.4.0-1
+- do not depend on ladspa package explicitly
+* Wed Feb  4 2004 Fernando Lopez-Lezcano <nando@ccrma.stanford.edu> 0.3.0-1
+- updated to 0.3.0
+* Thu Jan 29 2004 Fernando Lopez-Lezcano <nando@ccrma.stanford.edu> 0.2.0-1
+- initial build
