@@ -4,13 +4,12 @@
 
 Summary:      	Tom's Audio Processing plugins
 Name:         	%{name}
-Version:      	%{version}
-Release:      	%{release}
+Version:      	0.7.2
+Release:      	1
 License:    	GPL
 Group:        	Sound
 URL:          	http://tap-plugins.sourceforge.net/
-Source0:      	tap-plugins-%{version}.tar.bz2
-BuildRoot:    	%{_tmppath}/%{name}-buildroot
+Source0:      	http://downloads.sourceforge.net/project/tap-plugins/tap-plugins/0.7.2/%{name}-%{version}.tar.gz
 
 %description
 TAP-plugins is short for Tom's Audio Processing plugins. It is a bunch
@@ -19,22 +18,19 @@ professional DAW environment such as Ardour.
 
 %prep
 %setup -q
-perl -p -i -e "s/-O3/$RPM_OPT_FLAGS/g" Makefile
+perl -p -i -e "s/-O3/%{optflags}/g" Makefile
 
 %build
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/ladspa
-make INSTALL_PLUGINS_DIR=$RPM_BUILD_ROOT%{_libdir}/ladspa/ \
-     INSTALL_LRDF_DIR=$RPM_BUILD_ROOT%{_datadir}/ladspa/rdf/ install
+mkdir -p %{buildroot}%{_libdir}/ladspa
+make INSTALL_PLUGINS_DIR=%{buildroot}%{_libdir}/ladspa/ \
+     INSTALL_LRDF_DIR=%{buildroot}%{_datadir}/ladspa/rdf/ install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc CREDITS README
 %dir %{_libdir}/ladspa
 %{_libdir}/ladspa/*.so
@@ -90,3 +86,4 @@ rm -rf $RPM_BUILD_ROOT
 - updated to 0.3.0
 * Thu Jan 29 2004 Fernando Lopez-Lezcano <nando@ccrma.stanford.edu> 0.2.0-1
 - initial build
+
