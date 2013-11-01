@@ -1,2 +1,4 @@
+removed_sources:
+  tap-plugins-0.7.1.tar.bz2: 13c27f223e71775f0b4b5afd29d212ab1046f5a7
 sources:
-  "tap-plugins-0.7.1.tar.bz2": 13c27f223e71775f0b4b5afd29d212ab1046f5a7
+  tap-plugins-0.7.2.tar.gz: f3f9da0c7141f222bd964ada1b6b709e02052d89
