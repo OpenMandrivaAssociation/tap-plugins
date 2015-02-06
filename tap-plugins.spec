@@ -1,11 +1,11 @@
 %define name	tap-plugins
 %define version 0.7.1
-%define release %mkrel 1
+%define release 2
 
 Summary:      	Tom's Audio Processing plugins
 Name:         	%{name}
 Version:      	0.7.2
-Release:      	1
+Release:      	2
 License:    	GPL
 Group:        	Sound
 URL:          	http://tap-plugins.sourceforge.net/
