@@ -8,7 +8,7 @@ Version:      	0.7.2
 Release:      	2
 License:    	GPL
 Group:        	Sound
-URL:          	http://tap-plugins.sourceforge.net/
+URL:          	https://tap-plugins.sourceforge.net/
 Source0:      	http://downloads.sourceforge.net/project/tap-plugins/tap-plugins/0.7.2/%{name}-%{version}.tar.gz
 
 %description
