@@ -1,0 +1,18 @@
+diff -rupN tap-plugins-1.0.1.old/Makefile tap-plugins-1.0.1/Makefile
+--- tap-plugins-1.0.1.old/Makefile	2019-01-20 13:10:05.000000000 +0100
++++ tap-plugins-1.0.1/Makefile	2025-08-12 16:43:42.093070489 +0200
+@@ -37,11 +37,11 @@ INSTALL_LRDF_DIR	=	/usr/local/share/lads
+ OS := $(shell uname -s)
+ 
+ CC      = gcc
+-CFLAGS  = -I. -O3 -Wall -fomit-frame-pointer -funroll-loops -ffast-math -c -fPIC -DPIC
++CFLAGS  += -I. -O3 -Wall -fomit-frame-pointer -funroll-loops -ffast-math -c -fPIC -DPIC
+ ifeq ($(OS),Darwin)
+-LDFLAGS = -nostartfiles -shared -Wl,-install_name,symbolic -lc -lm
++LDFLAGS += -nostartfiles -shared -Wl,-install_name,symbolic -lc -lm
+ else
+-LDFLAGS = -nostartfiles -shared -Wl,-Bsymbolic -lc -lm -lrt
++LDFLAGS += -nostartfiles -shared -Wl,-Bsymbolic -lc -lm -lrt
+ endif
+ MODULES = $(wildcard *.c)
+ 
