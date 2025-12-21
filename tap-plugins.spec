@@ -10,6 +10,7 @@ Source0:	%{name}-%{version}.tar.gz
 # From Debian
 Patch0:	tap-plugins-1.0.1-pass-compile-flags-correctly.patch
 
+BuildRequires:	make
 %description
 TAP-plugins is short for Tom's Audio Processing plugins. It is a bunch of
 LADSPA plugins for digital audio processing, intended for use in a
